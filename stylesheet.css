@@ -338,3 +338,23 @@ header img {
     transition: opacity 0.3s ease;
     opacity: 1;
 }
+.secret {
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.secret:hover {
+    transition: all 0.4s ease;
+    opacity: 0.5;
+}
+#banana{
+    opacity: 0;
+    transition:all 0.4s ease;
+    float:left;
+    position:absolute;
+    
+    
+}
+#banana:hover{
+    opacity: 1;
+    transition:all 0.4s ease;
+}

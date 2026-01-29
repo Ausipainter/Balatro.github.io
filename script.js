@@ -107,19 +107,16 @@ window.addEventListener('scroll', () => {
         const speed = parseFloat(column.dataset.speed);
         const movement = scrolled * speed;
         
-        // Get all wrappers in this column
         const wrappers = Array.from(column.children);
         if (wrappers.length > 0) {
             const firstWrapper = wrappers[0];
             const wrapperHeight = firstWrapper.offsetHeight;
             
-            // Calculate position with looping (works for both positive and negative speeds)
             let loopedMovement = movement % wrapperHeight;
             if (loopedMovement < 0) {
                 loopedMovement += wrapperHeight;
             }
             
-            // Apply parallax to each wrapper - offset by 2 wrapper heights to account for clones before
             wrappers.forEach((wrapper, index) => {
                 const offset = (index - 2) * wrapperHeight; // -2 because we have 2 clones before the original
                 wrapper.style.transform = `translateY(${offset - loopedMovement}px)`;
