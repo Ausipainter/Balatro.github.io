@@ -411,3 +411,27 @@ header img {
 #animation.visible{
     opacity: 1;
 }
+.batman-container {
+  display: inline-block;
+  width: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.batman-container img {
+  width: 100%;
+  display: block;
+}
+
+.batman-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+}
+
+.batman-container:hover .batman-hover {
+  opacity: 1;
+}
