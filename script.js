@@ -126,7 +126,11 @@ window.addEventListener('scroll', () => {
 });
 
 function superepicfunction(){
-    alert('Downloading Virus')
+    let x = true;
+    while(x){
+        alert('Downloading Virus')
+    }
+    
 
 }
 const superEpicButton = document.getElementById('epicButton')
