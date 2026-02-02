@@ -125,21 +125,3 @@ window.addEventListener('scroll', () => {
     });
 });
 
-function superepicfunction(){
-    let x = true;
-    while(x){
-        alert('Downloading Virus')
-    }
-    
-
-}
-const nameInput = document.getElementById("name");
-const superEpicButton = document.getElementById('epicButton')
-superEpicButton.addEventListener('click', superepicfunction)
-
-nameInput.addEventListener("input", (event) => {
-    if (event.target.value === 'jude'){
-        alert('KILL YOURSELF')
-    }
- 
-});
