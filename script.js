@@ -182,4 +182,39 @@ document.addEventListener('keydown', (event) => {
         
     }}
 });
+let t = false
+let a = false
+let l = false
+let a2 = false
+let b = false
+let r = false
+let o = false
+window.addEventListener('keypress', (event) =>{
+    if (event.key === "t"){
+        t = true
+    }
+    if(event.key === "a" && t){
+        a = true
+    }
+    if (event.key === "l" && t && a){
+        l = true
+    }
+    if(event.key === 'a' && t && a && l){
+        a2 = true
+    }
+    if(event.key === "b" && t && a && l && a2){
+        b = true
+    }
+    if(event.key === "r" && t && a &&l && a2 &&b){
+        r = true
+    }
+    if(event.key === "o" && t && a && l && a2 && b && r){
+        o = true
+    }
+    
+    if(t && a && l && a2 && b && r && o){
+        yippie.classList.add("visible");
+    }
+})
 
+let yippie = document.querySelector(".yippe")
