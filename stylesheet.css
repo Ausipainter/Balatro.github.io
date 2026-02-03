@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     cursor: url('Images/Cursor.png'), pointer;
+    text-align: center;
 
 }
 
@@ -459,6 +460,8 @@ table{
     align-items: center;
     display: flex;
     justify-content: center;
+    display:inline-table;
+    border-collapse: collapse;
 }
 tr,td{
     padding:20px;
@@ -477,8 +480,10 @@ tr,td{
     background-color: rgb(8, 224, 8);
     margin:20px;
     border: greenyellow double;
-    text-align: center;
+    
     padding:20px;
+    display: inline-block;
+    
 
 }
 
