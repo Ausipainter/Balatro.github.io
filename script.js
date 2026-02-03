@@ -131,7 +131,7 @@ let x = 100;
 let y = 100;
 const speed = 10;
 const cubeSize = 50;
-let cubeVisible = false; // Track if cube has been revealed
+let cubeVisible = false; 
 
 function checkCollision(element1, element2) {
     const rect1 = element1.getBoundingClientRect();
