@@ -453,3 +453,31 @@ header img {
   width: 100%;
   height: auto;
 }
+
+table{
+    background-color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+tr,td{
+    padding:20px;
+    text-align: center;
+    border:black solid;
+}
+
+.tableName{
+    background-color: aqua;
+}
+.tableRow{
+    background-color: rgb(0, 255, 136);
+}
+
+#conclusion{
+    background-color: rgb(8, 224, 8);
+    margin:20px;
+    border: greenyellow double;
+    text-align: center;
+    padding:20px;
+    
+}
