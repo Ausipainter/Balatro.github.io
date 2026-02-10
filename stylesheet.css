@@ -502,3 +502,38 @@ tr,td{
 .yippe.visible{
     opacity: 1;
 }
+
+.click-sprite {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-image: url("Images/Click.png");
+  background-repeat: no-repeat;
+  background-size: 2200px 100px;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform, opacity;
+  animation:
+    playSprite 0.73s steps(22) forwards,
+    fadeOut 0.73s ease-out forwards;
+}
+
+@keyframes playSprite {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2200px 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}

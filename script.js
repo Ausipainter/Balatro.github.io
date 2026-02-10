@@ -218,3 +218,29 @@ window.addEventListener('keypress', (event) =>{
 })
 
 let yippie = document.querySelector(".yippe")
+
+const clickimg = document.querySelector(".cursorImage");
+
+function showImage(ms) {
+  clickimg.style.display = "block";
+
+  setTimeout(() => {
+    clickimg.style.display = "none";
+  }, ms);
+}
+
+document.addEventListener("click", (e) => {
+  const sprite = document.createElement("div");
+  sprite.className = "click-sprite";
+
+  sprite.style.left = `${e.clientX}px`;
+  sprite.style.top = `${e.clientY}px`;
+
+  document.body.appendChild(sprite);
+
+  sprite.addEventListener("animationend", (event) => {
+    if (event.animationName === "fadeOut") {
+      sprite.remove();
+    }
+  });
+});
