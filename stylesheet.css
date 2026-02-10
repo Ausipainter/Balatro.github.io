@@ -140,19 +140,25 @@ body {
     opacity: 0.6;
 }
 
-header {
-    text-align: center;
+header ul{
+    border: double black 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 50px;
+    padding-top:10px;
+    background-color: white;
+    
+}
+header ul li{
+    display:inline;
+    padding-top:20px;
+    image-rendering: pixelated;
+    transition: transform 0.4s ease;
+    
 }
 
-header img {
-    image-rendering: pixelated;
-    width: 50%;
-    max-width: 80vw;
-    margin-top: 10vh;
-    padding: 2vw;
-    border-radius: 1vw;
-    border: black double 2vw;
-    background-color: white;
+header ul li img{
+    width:150px;
 }
 
 .button-container {

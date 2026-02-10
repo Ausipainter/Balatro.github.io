@@ -244,3 +244,47 @@ document.addEventListener("click", (e) => {
     }
   });
 });
+const ul = document.getElementById("list");
+const button = document.getElementById("shuffle");
+
+function shuffleSmooth() {
+  const items = Array.from(ul.children);
+
+  // FIRST: record current positions
+  const firstPositions = items.map(item =>
+    item.getBoundingClientRect()
+  );
+
+  // SHUFFLE (Fisher–Yates)
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+
+  // Apply new order
+  items.forEach(item => ul.appendChild(item));
+
+  // LAST: get new positions
+  const lastPositions = items.map(item =>
+    item.getBoundingClientRect()
+  );
+
+  // INVERT + PLAY
+  items.forEach((item, i) => {
+    const dx = firstPositions[i].left - lastPositions[i].left;
+    const dy = firstPositions[i].top - lastPositions[i].top;
+
+    item.style.transform = `translate(${dx}px, ${dy}px)`;
+
+    // force browser to apply transform
+    item.getBoundingClientRect();
+
+    item.style.transform = "";
+  });
+}
+
+// shuffle on button click
+button.addEventListener("click", shuffleSmooth);
+
+// shuffle on page load
+window.addEventListener("load", shuffleSmooth);
